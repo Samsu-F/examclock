@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Klausu(h)r</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="uhr.js"></script>
   </head>
   <body onload="init()">
-  <div id="wrapper">
+    <div id="wrapper">
       <div id="info">
-        <h1>Willkommen zur Klausur in <span id="lecture"></span> im <span id="semester"></span>!</h1><br />
+        <h1>
+          Willkommen zur Klausur in <span id="lecture"></span> im
+          <span id="semester"></span>!
+        </h1>
+        <br />
         <ul>
-            <li><b>Setzen Sie sich nur auf die blau markierten Plätze.</b></li>
-          <li>Auf dem Tisch: Klausur, Studierendenausweis, dokumentenechter Stift, Essen/Trinken</li>
+          <li><b>Setzen Sie sich nur auf die markierten Plätze.</b></li>
           <li><b>Es sind keine Hilfsmittel zur Klausur zugelassen.</b></li>
-            <li>Sie benötigen keinen Taschenrechner. Alle Rechenaufgaben sind durch Kopfrechnen lösbar.</li>
+          <li>
+            Auf dem Tisch: Klausur, Studierendenausweis, dokumentenechter Stift,
+            Trinken
+          </li>
+          <!-- <li>Sie benötigen keinen Taschenrechner. Alle Rechenaufgaben sind durch Kopfrechnen lösbar.</li> -->
           <li><b>Verwenden Sie keinen Rotstift und keinen Bleistift!</b></li>
-          <li>Bitte schalten Sie Ihr Handy aus und packen Sie Ihre Armbanduhr in die Tasche. Die Uhrzeit wird Ihnen stets auf dem Beamer angezeigt.</li>
-          <li>Falls Sie abgeben möchten oder eine Frage haben, ziehen Sie bitte Ihre Maske auf und melden Sie sich.</li>
-            <li>Hörsaalakrobatik beim Verlassen des Sitzplatzes geschieht auf eigene Gefahr&nbsp;&#128556;</li>
-	</ul><br />
-	<h2>Wir wünschen Ihnen viel Erfolg!</h2>
-</div>
+          <li>
+            Bitte schalten Sie Ihr Handy aus und packen Sie Ihre Armbanduhr in
+            die Tasche. Die Uhrzeit wird Ihnen stets auf dem Beamer angezeigt.
+          </li>
+          <!-- <li>Falls Sie abgeben möchten oder eine Frage haben, ziehen Sie bitte Ihre Maske auf und melden Sie sich.</li> -->
+          <!-- <li>Hörsaalakrobatik beim Verlassen des Sitzplatzes geschieht auf eigene Gefahr&nbsp;&#128556;</li> -->
+        </ul>
+        <br />
+        <h2>Wir wünschen Ihnen viel Erfolg!</h2>
+      </div>
       <div id="clock">
-      <p id="timeinfo">Die aktuelle Uhrzeit ist</p>
-      <h1 id="time">&nbsp;</h1>
-      <h2 id="timeleft">Sie haben noch&nbsp;<span id="mins">--</span> <span id="text">Minuten</span> Zeit.</h2>
+        <p id="timeinfo">Die aktuelle Uhrzeit ist</p>
+        <h1 id="time">&nbsp;</h1>
+        <h2 id="timeleft">
+          Sie haben noch&nbsp;<span id="mins">--</span>
+          <span id="text">Minuten</span> Zeit.
+        </h2>
+      </div>
     </div>
-  </div>
-  <audio controls id="jeopardy" type="audio/ogg" src="jeopardy.ogg"></audio>
-  <div id="settings">
-    <input type="text" id="duration" maxlength="3" placeholder="Klausurdauer in Minuten"/><input type="button" onclick="startTimer()" value="Start"/>
-  </div>
+    <!-- <audio controls id="jeopardy" type="audio/ogg" src="jeopardy.ogg"></audio> -->
+    <div id="settings">
+      <input
+        type="text"
+        id="duration"
+        maxlength="3"
+        size="5"
+        placeholder="Minuten"
+      />
+      <input type="button" onclick="startTimer()" value="Start" />
+      <br>
+      <input type="button" id="fullscreenbutton" onclick="setToFullscreen()" value="Fullscreen" />
+    </div>
   </body>
 </html>
